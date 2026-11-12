@@ -8,7 +8,26 @@
     <script>
         $(document).ready(function()
         {
-            // TODO: load the corresponding text file when a link is clicked
+             $("a#welcome").click(function(e)
+            {
+                e.preventDefault();
+                //let Welcome = $(this).attr("Welcome.txt");
+                $("div#output").load("Welcome.txt");
+            });
+
+            $("a#news").click(function(e)
+            {
+                e.preventDefault();
+                //let News = $(this).attr("News.txt");
+                $("div#output").load("News.txt");
+            });
+
+            $("a#about").click(function(e)
+            {
+                e.preventDefault();
+                //let page = $(this).attr("About.txt");
+                $("div#output").load("About.txt");
+            });
         });
     </script>
 </head>
