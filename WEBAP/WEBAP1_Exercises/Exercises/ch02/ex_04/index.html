@@ -8,12 +8,12 @@
     <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#load").click(function () {
-                var data = $get("cars.txt", function(data)
+            $("button#load").click(function () {
+                let data = $get("cars.txt", function()
                 {
-                    data.split(";");
-                });        
-                $("#brands").load(data);
+                    let cars = data.split(";");
+                }); 
+                $("#brands").load(cars);       
             });
         }); 
     </script>
@@ -23,5 +23,4 @@
     <select id="brands"></select>
     <button id="load">Load brands</button>
 </body>
-
 </html>
